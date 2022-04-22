@@ -700,6 +700,7 @@ body {
     .main__card1 {
         grid-column: 1/5;
         grid-row: 1/2;
+        
     }
     .main__card2 {
         grid-column: 1/5;
