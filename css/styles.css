@@ -723,7 +723,7 @@ body {
         letter-spacing: 2px;
         color: var(--darkgreen);
         outline: 2px solid var(--darkgreen);
-        padding: 30px 60px;
+        padding: 20px 40px;
         position: relative;
         overflow: hidden;
         transition: color 1s;
