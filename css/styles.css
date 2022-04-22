@@ -62,41 +62,43 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 10px;
+    width: 95%;
+    margin: 10px auto;
+}
+.main__cards {
+    width: 100%;
+    margin: 10px 0;
     border-radius: 10px;
     overflow: hidden;
-    background-color: var(--lightgreen);
     box-shadow: 0px 0px 15px -5px #000000;
+
 }
 .main__info {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
 }
+
 .main__info-title {
     width: 100%;
+
+    padding-top: 10px;
     text-align: center;
-    padding: 10px;
-    font-style: italic;
-    letter-spacing: 2px;
-    font-weight: 600;
-    font-family: 'Montserrat';
+    font-family: var(--font1);
 }
 .main__info-text {
-    text-align: center;
-    font-family: 'Montserrat';
+    padding: 10px;
     font-size: 10px;
     line-height: 15px;
-    margin-bottom: 10px;
+    text-align: center;
+    font-family: var(--font1);
 }
 .main__img-box {
     width: 100%;
+    min-height: 150px;
 }
 .main__img {
     object-fit: cover;
     width: 100%;
-    height: 200px;
+    min-height: 150px;
 }
 /* ABOUT US - aboutus.html */
 .aboutUs__box {
@@ -437,9 +439,6 @@ body {
     .navbar__links {
         font-size: 12px;
     }
-    .main-box {
-        margin: 20px;
-    }
     /* ABOUT US */
     .aboutUs__card {
         padding: 20px;
@@ -467,26 +466,7 @@ body {
         grid-template-rows: 100px auto auto;
     }
     /* INDEX */
-    .main-box {
-        height: 500px;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr;
-    }
-    .main__img-box {
-        height: 100%;
-        grid-row: 2/3;
-    }
-    .main__img {
-        object-fit: cover;
-        width: 100%;
-        height: 320px;
-    }
-    .main__info {
-        width: 80%;
-        justify-self: center;
-        grid-row: 1/2;
-    }
+
     /* ABOUT US */
     .aboutUs__title {
         font-size: 2.2rem;
@@ -559,35 +539,7 @@ body {
         font-size: 0.8rem;
     }
     /* INDEX */
-    .main-box {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
-        align-content: space-around;
-    }
-    .main__img-box {
-        grid-column: 1/2;
-        grid-row: 1/2;
-        width: 100%;
-    }
-    .main__img {
-        width: 100%;
-        height: 100%;
-    }
-    .main__info {
-        width: 100%;
-        grid-column: 2/3;
-        grid-row: 1/2;
-        height: 350px;
-        align-content: center;
-        justify-self: unset;
-    }
-    .main__info-text {
-        padding: 0 20px;
-        font-size: 16px;
-        line-height: 23px;
-        margin-bottom: 0;
-    }
+    
     /* ABOUT US */
     .aboutUs__card {
         margin: 20px;
@@ -692,32 +644,127 @@ body {
 
 
 @media (min-width:1024px) {
+    body {
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 100px auto auto;
+    }
+    .header-box {
+        grid-column: 1/9;
+        grid-row: 1/2;
+    }
     .navbar__logo {
         font-size: 3rem;
     }
     .navbar__links {
         font-size: 1rem;
     }
+    /* INDEX */
     .main-box {
+        grid-row: 2/3;
+        grid-column: 1/9;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, auto);
+        width: 80%;
+    }
+
+    .main__cards {
+        width: 100%;
+        height: 300px;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 500px;
-        margin: 30px;
+        grid-row: auto;
+        margin: 50px 0;
     }
-    /* INDEX */
+    .main__card1 {
+        grid-column: 1/5;
+        grid-row: 1/2;
+    }
+    .main__card2 {
+        grid-column: 1/5;
+        grid-row: 2/3;
+        display: flex;
+    }
+    .main__info-card2 {
+        order: 1;
+    }
+    .main__card3 {
+        grid-column: 1/5;
+        grid-row: 3/4;
+    }
+    .main__card4 {
+        grid-column: 1/5;
+        grid-row: 4/5;
+        display: flex;
+    }
+    .main__info-card4 {
+        order: 1;
+    }
+
     .main__info {
-        height: 100%;
+        grid-column: 1/2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
     }
     .main__info-title {
-        font-size: 40px;
+        padding: 10px 0;
     }
     .main__info-text {
-        font-size: 16px;
-        line-height: 30px;
+        padding: 8px 18px;
+        line-height: 25px;
+        font-size: 1rem;
+    }
+    .button{
+        align-self: center;
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--darkgreen);
+        outline: 2px solid var(--darkgreen);
+        padding: 30px 60px;
+        position: relative;
+        overflow: hidden;
+        transition: color 1s;
+        font-family: var(--font1);
+        font-weight: 500;
+    }
+    
+    .button:hover{
+        color: #fff;
+    }
+    
+    .button::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -50px;
+        width: 150%;
+        height: 100%;
+        background-color: var(--darkgrey);
+        transform: scaleX(0) skewX(35deg);
+        transform-origin: left;
+        z-index: -1;
+        transition: transform 1s;
+    }
+    
+    .button:hover::before{
+        transform: scaleX(1) skewX(35deg);
+    }
+    .btn:hover::before {
+        transform: scaleX(1) skewX(35deg);
     }
     .main__img-box {
-        height: 100%;
+        grid-column: 2/3;
     }
+    .main__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center centers;
+    }
+
     /* ABOUT US */
     .aboutUs__card {
         display: grid;
@@ -847,6 +894,10 @@ body {
         justify-content: space-around;    
     }
     /* FOOTER */
+    .footer-box {
+        grid-column: 1/9;
+        grid-row: 3/4;
+    }
     .footer {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: auto;
@@ -898,6 +949,19 @@ body {
 }
 
 @media (min-width:1200px) {
+    /* INDEX  */
+    .main__cards {
+        height: 400px;
+    }
+    .main__info-title {
+        font-size: 1.8rem;
+    }
+    .main__info-text {
+        font-size: 1.2rem;
+        line-height: 2rem;
+    }
+
+
     /* ABOUT US */
     .aboutUs__title {
         font-size: 3.5rem;
