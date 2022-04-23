@@ -534,34 +534,33 @@ body {
         grid-column: 1/2;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
     }
     .main__info-title {
         padding: 5px 0;
         padding-top: 10px;
         font-size: 1.5rem;
-        border: 1px solid #1ff;
     }
     .main__info-text {
         padding: 8px 18px;
         line-height: 18px;
-        font-size: .7rem;
-        border: 1px solid red;
+        font-size: .6rem;
     }
     .button{
         align-self: center;
         display: inline-block;
         text-decoration: none;
         text-transform: uppercase;
-        letter-spacing: 2px;
+        letter-spacing: 1.7px;
         color: var(--darkgreen);
         outline: 2px solid var(--darkgreen);
-        padding: 20px 40px;
+        padding: 10px 20px;
         position: relative;
         overflow: hidden;
         transition: color 1s;
         font-family: var(--font1);
         font-weight: 500;
+        font-size: .7rem;
     }
     
     .button:hover{
