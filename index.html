@@ -12,6 +12,7 @@
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/7edc31cc34.js" crossorigin="anonymous"></script>
     <!-- LINK ESTILOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
     <!-- TITULO -->
     <title>El Regional</title>
@@ -39,7 +40,9 @@
     </header>
     <!-- CUERPO -->
     <main class="main-box">
-        <div class="main__card1 main__cards">
+        <div class="main__card1 main__cards" data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
             <div class="main__info">
                 <h2 class="main__info-title">Nuestra Historia</h2>
                 <p class="main__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, est eveniet. Consectetur porro sunt vel, nemo nisi cupiditate, ea inventore libero deserunt accusantium commodi temporibus ut ex? Ut voluptates consectetur facere animi mollitia illo necessitatibus cumque atque quis corrupti, fugiat quae iure debitis earum sed perferendis. Dolorum, quia? Et, accusamus.</p>
@@ -48,7 +51,9 @@
                 <img class="main__img main__img-card1" src="./assets/images/historia.jpg" alt="El Regional">
             </div>
         </div>
-        <div class="main__card2 main__cards">
+        <div class="main__card2 main__cards" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
             <div class="main__info main__info-card2">
                 <h2 class="main__info-title">Nuestros platos</h2>
                 <p class="main__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, est eveniet. Consectetur porro sunt vel, nemo nisi cupiditate, ea inventore libero deserunt accusantium commodi temporibus ut ex?</p>
@@ -58,7 +63,9 @@
                 <img class="main__img" src="./assets/images/index__dish.jpg" alt="El Regional">
             </div>
         </div>
-        <div class="main__card3 main__cards">
+        <div class="main__card3 main__cards" data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
             <div class="main__info">
                 <h2 class="main__info-title">Nuestras bebidas</h2>
                 <p class="main__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, est eveniet. Consectetur porro sunt vel, nemo nisi cupiditate, ea inventore libero deserunt accusantium commodi temporibus ut ex? Ut voluptates consectetur facere animi mollitia illo necessitatibus cumque atque quis corrupti, fugiat quae iure debitis earum sed perferendis. Dolorum, quia? Et, accusamus.</p>
@@ -67,7 +74,9 @@
                 <img class="main__img" src="./assets/images/index__drinks.jpg" alt="El Regional">
             </div>
         </div>
-        <div class="main__card4 main__cards">
+        <div class="main__card4 main__cards" data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine">
             <div class="main__info main__info-card4">
                 <h2 class="main__info-title">Encuentranos!</h2>
                 <p class="main__info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam, est eveniet. Consectetur porro sunt vel, nemo nisi cupiditate, ea inventore libero deserunt accusantium commodi temporibus ut ex?</p>
@@ -79,7 +88,7 @@
         </div>
     </main>
     <!-- FOOTER -->
-    <footer class="footer-box">
+    <footer class="footer-box" data-aos="fade-up-left">
         <div class="footer">
             <div class="footer__contact">
                 <!-- FORMAS DE CONTACTO -->
@@ -101,5 +110,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
