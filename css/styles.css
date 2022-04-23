@@ -73,7 +73,6 @@ body {
     transform-origin: left;
     transition: transform .25s ease;
 }
-
 .navbar__links:hover::after {
     transform: scaleX(1);
 }
@@ -83,34 +82,77 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95%;
+    width: 90%;
     margin: 10px auto;
 }
 .main__cards {
     width: 100%;
+    height: 350px;
     margin: 10px 0;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 0px 15px -5px #000000;
-
 }
 .main__info {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .main__info-title {
     width: 100%;
 
-    padding-top: 10px;
+    padding-top: 20px;
+    font-size: 1rem;
     text-align: center;
     font-family: var(--font1);
 }
 .main__info-text {
     padding: 10px;
-    font-size: 10px;
+    font-size: .5rem;
     line-height: 15px;
     text-align: center;
     font-family: var(--font1);
+}
+.button{
+    align-self: center;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--darkgreen);
+    outline: 2px solid var(--darkgreen);
+    padding: 5px 10px;
+    position: relative;
+    overflow: hidden;
+    transition: color 1s;
+    font-family: var(--font1);
+    font-weight: 500;
+
+    font-size: .6rem;
+    margin: auto;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+
+}
+.button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 150%;
+    height: 100%;
+    background-color: var(--darkgrey);
+    transform: scaleX(0) skewX(35deg);
+    transform-origin: left;
+    z-index: -1;
+    transition: transform 1s;
+}
+
+.button:hover::before{
+    transform: scaleX(1) skewX(35deg);
+}
+.btn:hover::before {
+    transform: scaleX(1) skewX(35deg);
 }
 .main__img-box {
     width: 100%;
@@ -118,8 +160,12 @@ body {
 }
 .main__img {
     object-fit: cover;
+    object-position: center;
     width: 100%;
     min-height: 150px;
+}
+.main__img-card1 {
+    object-position: center -100px;
 }
 /* ABOUT US - aboutus.html */
 .aboutUs__box {
@@ -487,7 +533,6 @@ body {
         grid-template-rows: 100px auto auto;
     }
     /* INDEX */
-    /* INDEX */
     .main-box {
         grid-row: 2/3;
         grid-column: 1/9;
@@ -551,7 +596,8 @@ body {
         display: inline-block;
         text-decoration: none;
         text-transform: uppercase;
-        letter-spacing: 1.7px;
+
+        
         color: var(--darkgreen);
         outline: 2px solid var(--darkgreen);
         padding: 10px 20px;
@@ -560,7 +606,11 @@ body {
         transition: color 1s;
         font-family: var(--font1);
         font-weight: 500;
+
         font-size: .7rem;
+        letter-spacing: 1.7px;
+        margin-top: 10px;
+
     }
     
     .button:hover{
@@ -597,12 +647,16 @@ body {
         object-position: center centers;
     }
     /* ABOUT US */
+    .aboutUs__box {
+        margin: 20px auto;
+        width: 80%;
+    }
     .aboutUs__title {
         font-size: 2.2rem;
         padding: 5px;
     }
     .aboutUs__card:first-child {
-        margin-bottom: 20px;
+        margin-bottom: 50px;
     }
     .aboutUs__card-text h3 {
         font-size: 1.8rem;   
@@ -617,6 +671,7 @@ body {
     }
     .galery__grid {
         grid-template-rows: repeat(7,250px);
+        gap: 20px;
     }
     .galery__img {
         height: 100%;
@@ -829,7 +884,6 @@ body {
     .main__info-card4 {
         order: 1;
     }
-
     .main__info {
         grid-column: 1/2;
         display: flex;
@@ -895,6 +949,10 @@ body {
     }
 
     /* ABOUT US */
+    .aboutUs__box {
+        grid-column: 1/9;
+        grid-row: 2/3;
+    }
     .aboutUs__card {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -914,6 +972,8 @@ body {
     .galery {
         margin: auto;
         width: 90%;
+        grid-column: 1/9;
+        grid-row: 2/3;
     }
     .galery__title {
         font-size: 50px;
